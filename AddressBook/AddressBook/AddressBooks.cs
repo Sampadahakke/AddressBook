@@ -74,12 +74,36 @@ namespace AddressBook
                         default:
                             break;
                     }
-                    
                 }
-                
-              
+                else
+                {
+                 Console.WriteLine("InValid Name!!!");
+                 Editexistingcontact();
+                }
             }
+        }
 
+        //Using Method To Delete Contact
+        public void Deletecontact()
+        {
+            Console.WriteLine("\nEnter first name you want delete");
+            string name = Console.ReadLine();
+            Details delete = new Details();
+            foreach (var detail in AddressList)
+            {
+                if (detail.FirstName == name)
+                {
+                    AddressList.Remove(detail);
+                    Console.WriteLine(name + " contact is deleted");
+                    Console.ReadLine();
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Name!!!");
+                    Deletecontact();
+                }
+            }
         }
             //Display Of Contacts
             public void Display()
