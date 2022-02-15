@@ -23,7 +23,7 @@ namespace AddressBook
 
             while (flag)
             {
-                Console.WriteLine("\nEnter Number to Execute the Address book Program \n1. Create Details \n2. Add Contacts \n3.Exit");
+                Console.WriteLine("\nEnter Number to Execute the Address book Program \n1. Create Details \n2. Add Contacts \n3. Edit Contacts \n4. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
 
                 //Using switch case to check options
@@ -56,6 +56,11 @@ namespace AddressBook
                         break;
 
                     case 3:
+                        address.Editexistingcontact();
+                        address.Display();
+                        break;
+
+                    case 4:
                         flag = false;
                         break;
 
