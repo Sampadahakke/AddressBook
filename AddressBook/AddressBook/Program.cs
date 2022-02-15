@@ -10,9 +10,12 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("==========================================Welcome To Address Book==================================================");
             Console.ReadLine();
 
+            //Creating Object Of AddressBooks
+            AddressBooks address = new AddressBooks();
             //Creating Object Of Details Class
             Details details = new Details();
             //Assigning Variable
@@ -20,7 +23,7 @@ namespace AddressBook
 
             while (flag)
             {
-                Console.WriteLine("\nEnter Number to Execute the Address book Program \n1. Create Details \n2. Exit");
+                Console.WriteLine("\nEnter Number to Execute the Address book Program \n1. Create Details \n2. Add Contacts \n3.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
 
                 //Using switch case to check options
@@ -36,10 +39,23 @@ namespace AddressBook
                         details.Zip = Console.ReadLine();
                         details.PhoneNumber = Console.ReadLine();
                         details.EmailId = Console.ReadLine();
-                        details.Display();
                         break;
 
                     case 2:
+                        Console.WriteLine("Enter the Contact Information : \nFirst Name, Last Name,Address,City,State, Zip, Phone Number and Email Id");
+                        details.FirstName = Console.ReadLine();
+                        details.LastName = Console.ReadLine();
+                        details.Address = Console.ReadLine();
+                        details.City = Console.ReadLine();
+                        details.State = Console.ReadLine();
+                        details.Zip = Console.ReadLine();
+                        details.PhoneNumber = Console.ReadLine();
+                        details.EmailId = Console.ReadLine();
+                        address.AddContacs(details);
+                        address.Display();
+                        break;
+
+                    case 3:
                         flag = false;
                         break;
 

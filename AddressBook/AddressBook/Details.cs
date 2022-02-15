@@ -16,25 +16,7 @@ namespace AddressBook
         public string Zip { get; set; }
         public string PhoneNumber { get; set; }
         public string EmailId { get; set; }
-
-
-
-        public void Display()
-        {
-            Console.WriteLine("First Name = " + this.FirstName);
-            Console.WriteLine("Last Name = " + this.LastName);
-            Console.WriteLine("Address = " + this.Address);
-            Console.WriteLine("City = " + this.City);
-            Console.WriteLine("State = " + this.State);
-            Console.WriteLine("Zip = " + this.Zip);
-            Console.WriteLine("Phone Number = " + this.PhoneNumber);
-            Console.WriteLine("Email Id = " + this.EmailId);
-
-        }
-
-
+ 
     }
-
-    
 }
     
